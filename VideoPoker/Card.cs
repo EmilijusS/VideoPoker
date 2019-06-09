@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace VideoPoker
 {
-    class Card
+    public class Card
     {
-        public SuitType Suit { get; private set; }
-        public ValueType Value { get; private set; }
+        public SuitType Suit { get; }
+        public ValueType Value { get; }
 
         public Card(SuitType suit, ValueType value)
         {
@@ -29,8 +29,8 @@ namespace VideoPoker
 
         public override int GetHashCode()
         {
-            // Probably not a good implementation, but should be enough if necessary
-            return Suit.GetHashCode() + Value.GetHashCode();
+            // https://stackoverflow.com/questions/9009760/implementing-gethashcode-correctly
+            return Suit.GetHashCode() * 17 + Value.GetHashCode();
         }
 
         public override string ToString()

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoPoker", "VideoPoker\VideoPoker.csproj", "{1D746FFF-F226-4670-BC58-B32DD6D202D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{91AC3690-957C-4378-8925-9325F7D1F420}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1D746FFF-F226-4670-BC58-B32DD6D202D3} = {1D746FFF-F226-4670-BC58-B32DD6D202D3}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VideoPoker
 {
-    class Dealer
+    public class Dealer
     {
         private List<Card> deck;
 
