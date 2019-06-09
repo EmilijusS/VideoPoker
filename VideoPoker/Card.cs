@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VideoPoker
 {
-    public class Card
+    public class Card : IComparable
     {
         public CardSuitType Suit { get; }
         public CardValueType Value { get; }
@@ -38,6 +38,24 @@ namespace VideoPoker
             // TODO: maybe should do something more similar to 5♠, J♣ etc.
             // Can't use ♣♠♦♥ symbols though, as they wouldn't work in Windows 7 terminal
             return Value.ToString() + " of " + Suit.ToString();
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+            {
+                return 1;
+            }
+
+            var other = obj as Card;
+            var valueComparison = Value.CompareTo(other.Value);
+
+            if(valueComparison != 0)
+            {
+                return valueComparison;
+            }    
+
+            return Suit.CompareTo(other.Suit);
         }
     }
 }
