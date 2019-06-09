@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="CardCombinationType.cs" />
-    <Compile Include="Dealer.cs" />
+    <Compile Include="Entities\Card.cs" />
+    <Compile Include="Enums\CardCombinationType.cs" />
+    <Compile Include="Entities\Dealer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scorer.cs" />
-    <Compile Include="CardSuitType.cs" />
-    <Compile Include="CardValueType.cs" />
+    <Compile Include="Entities\Scorer.cs" />
+    <Compile Include="Enums\CardSuitType.cs" />
+    <Compile Include="Enums\CardValueType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
