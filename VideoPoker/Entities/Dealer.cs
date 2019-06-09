@@ -35,7 +35,7 @@ namespace VideoPoker
                 throw new InvalidOperationException("Deck is empty.");
             }
 
-            var card = deck[0];
+            var card = deck.First();
             deck.RemoveAt(0);
             return card;
         }

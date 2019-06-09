@@ -37,8 +37,7 @@ namespace VideoPoker
 
         public override string ToString()
         {
-            // TODO: maybe should do something more similar to 5♠, J♣ etc.
-            // Can't use ♣♠♦♥ symbols though, as they wouldn't work in Windows 7 terminal
+            // Can't use ♣♠♦♥ symbols, as they wouldn't work in Windows 7 terminal
             return Value.ToString() + " of " + Suit.ToString();
         }
 

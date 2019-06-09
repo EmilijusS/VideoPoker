@@ -117,7 +117,9 @@ namespace VideoPoker
 
         private void PrintScore(List<Card> hand)
         {
-            Console.WriteLine("SCORE CALCULATION NOT IMPLEMENTED.");
+            var combination = new Scorer(hand).GetCombination();
+
+            Console.WriteLine($"You scored {(int)combination} point(s)! ({combination.ToString()} combination)");
         }
 
         private bool WillPlayAgain()

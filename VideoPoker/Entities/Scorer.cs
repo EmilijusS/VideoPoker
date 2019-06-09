@@ -89,7 +89,6 @@ namespace VideoPoker
                 if (hand[i].Value == hand[i - 1].Value)
                 {
                     ++sameValueCount;
-                    continue;
                 }
                 else
                 {
