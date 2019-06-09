@@ -8,12 +8,10 @@ namespace VideoPoker
 {
     public class Dealer
     {
-        private List<Card> deck;
+        private List<Card> deck = new List<Card>();
 
         public Dealer()
         {
-            deck = new List<Card>();
-
             var suits = Enum.GetValues(typeof(SuitType));
             var values = Enum.GetValues(typeof(ValueType));
 
@@ -24,6 +22,10 @@ namespace VideoPoker
                     deck.Add(new Card(suit, value));
                 }
             }
+
+            var random = new Random();
+
+            deck = deck.OrderBy(x => random.Next()).ToList();
         }
 
         public Card Draw()
@@ -33,7 +35,9 @@ namespace VideoPoker
                 throw new InvalidOperationException("Deck is empty.");
             }
 
-            throw new NotImplementedException();
+            var card = deck[0];
+            deck.RemoveAt(0);
+            return card;
         }
     }
 }

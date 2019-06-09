@@ -28,8 +28,14 @@ namespace Tests
         [TestMethod]
         public void DifferentDealersDealDifferently()
         {
+
             var dealer1 = new Dealer();
+            // Have to sleep to simulate real life scenario, because
+            // creating dealers one right after another gets the same
+            // time-based randomization seed.
+            System.Threading.Thread.Sleep(100);
             var dealer2 = new Dealer();
+
             var cards1 = new HashSet<Card>();
             var cards2 = new HashSet<Card>();
 
