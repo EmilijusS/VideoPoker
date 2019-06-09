@@ -8,10 +8,10 @@ namespace VideoPoker
 {
     public class Card
     {
-        public SuitType Suit { get; }
-        public ValueType Value { get; }
+        public CardSuitType Suit { get; }
+        public CardValueType Value { get; }
 
-        public Card(SuitType suit, ValueType value)
+        public Card(CardSuitType suit, CardValueType value)
         {
             Suit = suit;
             Value = value;

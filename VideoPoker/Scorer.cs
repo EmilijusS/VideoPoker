@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace VideoPoker
 {
-    class Scorer
+    public class Scorer
     {
+        private List<Card> hand;
 
-        public static CombinationType GetCombination(List<Card> hand)
+        public Scorer(List<Card> hand)
+        {
+            this.hand = hand;
+        }
+
+        public CardCombinationType GetCombination()
         {
             throw new NotImplementedException();
         }

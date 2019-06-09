@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace VideoPoker
 {
-    public enum SuitType { Diamonds, Clubs, Hearts, Spades };
+    public enum CardSuitType { Diamonds, Clubs, Hearts, Spades };
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VideoPoker
 {
-    public enum ValueType { Two, Three, Four, Five, Six,
+    public enum CardValueType { Two, Three, Four, Five, Six,
                             Seven, Eight, Nine, Ten, Jack,
                             Queen, King, Ace };
 }

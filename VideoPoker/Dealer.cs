@@ -12,12 +12,12 @@ namespace VideoPoker
 
         public Dealer()
         {
-            var suits = Enum.GetValues(typeof(SuitType));
-            var values = Enum.GetValues(typeof(ValueType));
+            var suits = Enum.GetValues(typeof(CardSuitType));
+            var values = Enum.GetValues(typeof(CardValueType));
 
-            foreach (SuitType suit in suits)
+            foreach (CardSuitType suit in suits)
             {
-                foreach(ValueType value in values)
+                foreach(CardValueType value in values)
                 {
                     deck.Add(new Card(suit, value));
                 }
