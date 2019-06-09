@@ -17,7 +17,7 @@ namespace VideoPoker
 
         public void Game()
         {
-            while(true)
+            while (true)
             {
                 var dealer = new Dealer();
                 var hand = new List<Card>();
@@ -31,7 +31,7 @@ namespace VideoPoker
 
                 DiscardCards(hand);
 
-                for(int i = hand.Count; i < 5; ++i)
+                for (int i = hand.Count; i < 5; ++i)
                 {
                     hand.Add(dealer.Draw());
                 }
@@ -40,7 +40,7 @@ namespace VideoPoker
 
                 PrintScore(hand);
 
-                if(!WillPlayAgain())
+                if (!WillPlayAgain())
                 {
                     return;
                 }
@@ -53,7 +53,7 @@ namespace VideoPoker
 
             for (int i = 0; i < 5; ++i)
             {
-                Console.WriteLine($"{i+1}. {hand[i]}");
+                Console.WriteLine($"{i + 1}. {hand[i]}");
             }
         }
 
@@ -63,11 +63,11 @@ namespace VideoPoker
 
             string input;
 
-            while(true)
+            while (true)
             {
                 input = Console.ReadLine();
 
-                if(!IsDiscardInputValid(input))
+                if (!IsDiscardInputValid(input))
                 {
                     Console.WriteLine("Invalid input. Try again:");
                     continue;
@@ -78,13 +78,13 @@ namespace VideoPoker
 
             var toDiscard = new List<Card>();
 
-            foreach(char digit in input)
+            foreach (char digit in input)
             {
                 // Subtracting '1' converts char to list index
                 toDiscard.Add(hand[digit - '1']);
             }
 
-            foreach(Card card in toDiscard)
+            foreach (Card card in toDiscard)
             {
                 hand.Remove(card);
             }
@@ -92,7 +92,7 @@ namespace VideoPoker
 
         private bool IsDiscardInputValid(string input)
         {
-            if(input.Length > 5)
+            if (input.Length > 5)
             {
                 return false;
             }

@@ -17,7 +17,7 @@ namespace VideoPoker
 
             foreach (CardSuitType suit in suits)
             {
-                foreach(CardValueType value in values)
+                foreach (CardValueType value in values)
                 {
                     deck.Add(new Card(suit, value));
                 }
@@ -30,7 +30,7 @@ namespace VideoPoker
 
         public Card Draw()
         {
-            if(deck.Count == 0)
+            if (deck.Count == 0)
             {
                 throw new InvalidOperationException("Deck is empty.");
             }

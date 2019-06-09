@@ -16,7 +16,7 @@ namespace Tests
             var cards = new HashSet<Card>();
 
             // Deck contains 52 cards
-            for(int i = 0; i < 52; ++i)
+            for (int i = 0; i < 52; ++i)
             {
                 cards.Add(dealer.Draw());
             }

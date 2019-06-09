@@ -20,7 +20,9 @@ namespace VideoPoker
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
+            {
                 return false;
+            }
 
             var other = obj as Card;
 
@@ -50,10 +52,10 @@ namespace VideoPoker
             var other = obj as Card;
             var valueComparison = Value.CompareTo(other.Value);
 
-            if(valueComparison != 0)
+            if (valueComparison != 0)
             {
                 return valueComparison;
-            }    
+            }
 
             return Suit.CompareTo(other.Suit);
         }
