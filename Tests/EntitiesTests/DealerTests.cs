@@ -24,11 +24,9 @@ namespace Tests
             Assert.AreEqual(52, cards.Count);
         }
 
-        // There's a miniscule chance that this test fails with correct implementation
         [TestMethod]
         public void DifferentDealersDealDifferently()
         {
-
             var dealer1 = new Dealer();
             // Have to sleep to simulate real life scenario, because
             // creating dealers one right after another gets the same
