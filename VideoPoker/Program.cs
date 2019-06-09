@@ -10,6 +10,9 @@ namespace VideoPoker
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(new Card(SuitType.Spades, ValueType.Ace));
+
+            Console.ReadLine();
         }
     }
 }
